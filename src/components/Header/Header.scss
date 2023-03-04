@@ -1,0 +1,81 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  &__logo {
+    width: 55%;
+    height: 2rem;
+    display: flex;
+    @include tablet {
+      justify-content: space-between;
+      width: 25%;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem;
+    width: 100%;
+    @include tablet {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 60%;
+      padding-right: 2rem;
+    }
+  }
+
+  &__box {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 1rem;
+    background-color: $secondary-color-Alabaster;
+    background-image: url(../../assets/Icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 38px;
+  }
+  &__image {
+    border-radius: 50px;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    object-position: 30%;
+    @include tablet {
+      order: 3;
+    }
+  }
+  &__button {
+    width: 100%;
+    color: white;
+    background-image: url(../../assets/Icons/upload.svg);
+    background-repeat: no-repeat;
+    background-color: $primary-color-blue;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 10px;
+    padding: 1rem;
+    border-color: $primary-color-blue;
+    @include tablet {
+      width: 30%;
+    }
+  }
+}

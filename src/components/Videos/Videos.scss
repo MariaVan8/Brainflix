@@ -1,0 +1,15 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+.video {
+  &__image {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+}

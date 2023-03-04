@@ -1,0 +1,91 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+.comment {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  &__left {
+    display: flex;
+    padding-bottom: 1rem;
+    // padding-top: 1rem;
+  }
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    // padding-bottom: 1rem;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  &__item-left {
+    display: flex;
+  }
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+  }
+  &__item-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    @include tablet {
+      display: flex;
+      // flex-direction: row;
+    }
+  }
+  &__title {
+    width: 100%;
+    font-size: 0.5rem;
+    font-weight: 500;
+    color: $primary-color-gray;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__content {
+    @include tablet {
+      width: 60%;
+    }
+  }
+  &__button {
+    background-color: aqua;
+    color: aliceblue;
+    border-color: aqua;
+    border-radius: 2px;
+    @include tablet {
+      width: 30%;
+      padding: 1rem;
+    }
+  }
+}
