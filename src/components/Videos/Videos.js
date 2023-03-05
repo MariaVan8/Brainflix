@@ -1,4 +1,3 @@
-import mohan from "../../assets/Images/Mohan-muruge.jpg";
 import "../Videos/Videos.scss";
 
 function Videos({ selectedVideo }) {

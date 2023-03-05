@@ -40,7 +40,7 @@ function Comments({ selectedVideo }) {
           return (
             <div className="comment">
               <div className="comment__left">
-                <img src="{comment.avatar}" className="comment__image" />
+                <div className="comment__image" />
               </div>
               <div className="comment__right">
                 <div className="comment__info" key={comment.id}>

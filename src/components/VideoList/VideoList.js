@@ -23,6 +23,7 @@ function VideoList({ videos, selectedVideo, handleVideoClick }) {
             </div>
           </div>
         ))}
+      <div className="extra"></div>
     </>
   );
 }

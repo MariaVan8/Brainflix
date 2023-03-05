@@ -12,7 +12,7 @@ function Header() {
           className="header__box"
           type="text"
           name="q"
-          placeholder="Search..."
+          placeholder="Search"
         />
         <img className="header__image" src={mohan} />
         <Button />

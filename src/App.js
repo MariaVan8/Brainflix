@@ -25,15 +25,19 @@ function App() {
     <>
       <Header />
       <Videos selectedVideo={selectedVideo} />
-      <Description selectedVideo={selectedVideo} />
-      <Comments selectedVideo={selectedVideo} />
-
-      {/* <NewComment handleAddNewComment={handleAddNewComment} /> */}
-      <VideoList
-        videos={videos}
-        selectedVideo={selectedVideo}
-        handleVideoClick={handleVideoClick}
-      />
+      <div className="desktop">
+        <div className="desktop__left">
+          <Description selectedVideo={selectedVideo} />
+          <Comments selectedVideo={selectedVideo} />
+        </div>
+        <div className="desktop__right">
+          <VideoList
+            videos={videos}
+            selectedVideo={selectedVideo}
+            handleVideoClick={handleVideoClick}
+          />
+        </div>
+      </div>
     </>
   );
 }
