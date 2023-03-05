@@ -1,7 +1,9 @@
+import "../Button/Button.scss";
+
 function Button(props) {
   return (
     <>
-      <h1></h1>
+      <button className="button">UPLOAD</button>
     </>
   );
 }

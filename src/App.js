@@ -8,8 +8,7 @@ import Videos from "./components/Videos/Videos";
 import VideoList from "./components/VideoList/VideoList";
 import VideoData from "./data/videos.json"; //has less info
 import DetailedVideos from "./data/video-details.json"; //has more info
-// import NewComment from "./components/NewComment/NewComment";
-import Button from "./components/Button/Button";
+import ButtonComment from "./components/ButtonComment/ButtonComment";
 
 function App() {
   const [videos, setVideos] = useState(VideoData); //array of videos
@@ -22,18 +21,13 @@ function App() {
     setSelectedVideo(newVideo[0]);
   };
 
-  // const handleAddNewComment = (NewComment) => {
-  //   console.log(NewComment);
-  //   setSelectedVideo([...selectedVideo, NewComment]);
-  // };
-
   return (
     <>
       <Header />
-      <Button />
       <Videos selectedVideo={selectedVideo} />
       <Description selectedVideo={selectedVideo} />
       <Comments selectedVideo={selectedVideo} />
+
       {/* <NewComment handleAddNewComment={handleAddNewComment} /> */}
       <VideoList
         videos={videos}

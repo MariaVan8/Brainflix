@@ -1,0 +1,24 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment__button {
+  width: 100%;
+  color: white;
+  background-image: url(../../assets/Icons/add_comment.svg);
+  background-repeat: no-repeat;
+  background-color: $primary-color-blue;
+  background-position: 10px center;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 5px;
+  padding: 0.8rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  @include tablet {
+    width: 30%;
+    height: 2.5rem;
+  }
+}
