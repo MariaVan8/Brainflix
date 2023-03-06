@@ -9,7 +9,6 @@
   padding-left: 1rem;
   align-items: center;
   @include desktop {
-    border-left: 0.16rem solid $secondary-color-mercury;
     padding-right: 5rem;
     padding-bottom: 1rem;
   }
@@ -22,9 +21,6 @@
     padding-left: 1rem;
     height: 3rem;
     text-transform: uppercase;
-    @include desktop {
-      border-left: 0.16rem solid $secondary-color-mercury;
-    }
   }
   &__left {
     width: 7rem;
@@ -37,6 +33,7 @@
     width: 7rem;
     border-radius: 5px;
     overflow: hidden;
+    aspect-ratio: 16/9;
   }
   &__right {
     display: flex;
@@ -64,12 +61,5 @@
     margin: 0;
     font-weight: 500 lighter;
     font-size: 0.8rem;
-  }
-}
-.extra {
-  @include desktop {
-    height: 5rem;
-    color: white;
-    border-left: 0.16rem solid $secondary-color-mercury;
   }
 }

@@ -37,7 +37,7 @@ function Comments({ selectedVideo }) {
           const day = date.getDate();
           const formattedDateTime = `${month}/${day}/${year} `;
           return (
-            <div className="comment">
+            <div className="comment" key={comment.id}>
               <div className="comment__left">
                 <div className="comment__image" />
               </div>

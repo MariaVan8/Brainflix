@@ -8,14 +8,13 @@ function VideoList({ videos, selectedVideo, handleVideoClick }) {
       {videos
         .filter((video) => video.id !== selectedVideo.id)
         .map((video) => (
-          <div className="videolist">
+          <div className="videolist" key={video.id}>
             <div
               className="videolist__left"
-              key={video.id}
               onClick={() => handleVideoClick(video.id)}
             >
               <img className="videolist__image" src={video.image} />
-              {/* <video src={video.url}></video> */}
+              {/* <video poster={video.image} className="videolist__image" /> */}
             </div>
             <div className="videolist__right">
               <p className="videolist__title">{video.title}</p>
@@ -23,7 +22,6 @@ function VideoList({ videos, selectedVideo, handleVideoClick }) {
             </div>
           </div>
         ))}
-      <div className="extra"></div>
     </>
   );
 }
