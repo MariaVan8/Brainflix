@@ -8,7 +8,6 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  // padding-bottom: 1rem;
   flex-wrap: wrap;
   @include tablet {
     flex-direction: row;
@@ -38,6 +37,10 @@
       width: 60%;
       padding-right: 2rem;
     }
+    @include desktop {
+      width: 40%;
+      margin-right: 4rem;
+    }
   }
 
   &__box {
@@ -53,6 +56,8 @@
     border-radius: 5px;
     @include tablet {
       height: 2.5rem;
+    }
+    @include desktop {
     }
   }
   &__image {

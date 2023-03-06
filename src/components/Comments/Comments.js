@@ -7,7 +7,6 @@ function Comments({ selectedVideo }) {
     event.preventDefault();
   };
 
-  console.log("PROPS:", selectedVideo);
   return (
     <>
       <h1 className="form__header">3 Comments</h1>
@@ -17,7 +16,7 @@ function Comments({ selectedVideo }) {
         </div>
         <form className="form__item-right" onSubmit={submitHandler}>
           <label className="form__title" htmlFor="content">
-            JOIN THE CONVERSATION
+            Join the conversation
           </label>
           <div className="form__container">
             <textarea
@@ -43,11 +42,13 @@ function Comments({ selectedVideo }) {
                 <div className="comment__image" />
               </div>
               <div className="comment__right">
-                <div className="comment__info" key={comment.id}>
+                <div className="comment__info">
                   <p className="comment__name">{comment.name}</p>
                   <p className="comment__date">{formattedDateTime}</p>
                 </div>
-                <p className="comment__item">{comment.comment}</p>
+                <p className="comment__item" key={comment.id}>
+                  {comment.comment}
+                </p>
               </div>
             </div>
           );

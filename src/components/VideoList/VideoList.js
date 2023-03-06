@@ -4,7 +4,7 @@ import "../VideoList/VideoList.scss";
 function VideoList({ videos, selectedVideo, handleVideoClick }) {
   return (
     <>
-      <h1 className="videolist__header">NEXT VIDEOS</h1>
+      <h1 className="videolist__header">Next videos</h1>
       {videos
         .filter((video) => video.id !== selectedVideo.id)
         .map((video) => (

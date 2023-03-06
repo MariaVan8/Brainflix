@@ -76,6 +76,7 @@
   &__header {
     font-size: 0.9rem;
     padding: 1rem;
+
     @include desktop {
       padding-left: 6rem;
     }
@@ -113,6 +114,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: $primary-color-gray;
+    text-transform: uppercase;
   }
   &__container {
     display: flex;
@@ -135,6 +137,7 @@
     background-color: $secondary-color-Alabaster;
     font-weight: 500;
     padding: 1rem;
+    overflow: hidden;
 
     @include tablet {
       width: 72%;

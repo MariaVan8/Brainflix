@@ -1,9 +1,9 @@
 import "../Button/Button.scss";
 
-function Button(props) {
+function Button() {
   return (
     <>
-      <button className="button">UPLOAD</button>
+      <button className="button">Upload</button>
     </>
   );
 }
