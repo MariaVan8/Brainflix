@@ -1,9 +1,11 @@
 import "../Button/Button.scss";
 
-function Button() {
+function Button(props) {
   return (
     <>
-      <button className="button">Upload</button>
+      <button type="submit" className={`button ${props.className}`}>
+        {props.text}
+      </button>
     </>
   );
 }

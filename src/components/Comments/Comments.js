@@ -3,6 +3,7 @@ import "../../components/Comments/Comments.scss";
 import ButtonComment from "../ButtonComment/ButtonComment";
 
 function Comments({ selectedVideo }) {
+  if (!selectedVideo) return;
   const submitHandler = (event) => {
     event.preventDefault();
   };
@@ -30,7 +31,7 @@ function Comments({ selectedVideo }) {
         </form>
       </div>
       <div>
-        {selectedVideo.comments.map((comment) => {
+        {selectedVideo.comments?.map((comment) => {
           const date = new Date(selectedVideo.timestamp);
           const year = date.getFullYear();
           const month = date.getMonth() + 1; // Months are zero-indexed, so add 1

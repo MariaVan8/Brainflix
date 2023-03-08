@@ -62,4 +62,8 @@
     font-weight: 500 lighter;
     font-size: 0.8rem;
   }
+  &__video {
+    text-decoration: none;
+    color: $secondary-color-black;
+  }
 }
