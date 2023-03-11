@@ -7,7 +7,12 @@ function UploadPage() {
   const navigate = useNavigate();
   const handleSubmitClick = (e) => {
     e.preventDefault();
-    alert("You succesfully uploaded the Video details");
+    alert("You succesfully uploaded the video description");
+    navigate(`/`);
+  };
+
+  const handleCancelClick = (e) => {
+    e.preventDefault();
     navigate(`/`);
   };
   return (
@@ -48,7 +53,11 @@ function UploadPage() {
                 className="publish__button"
                 text="Publish"
               />
-              <Button className="cancel__button" text="Cancel" />
+              <Button
+                handleClick={handleCancelClick}
+                className="cancel__button"
+                text="Cancel"
+              />
             </div>
           </div>
         </div>
