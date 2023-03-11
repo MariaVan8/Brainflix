@@ -3,7 +3,11 @@ import "../Button/Button.scss";
 function Button(props) {
   return (
     <>
-      <button type="submit" className={`button ${props.className}`}>
+      <button
+        type="submit"
+        onClick={props.handleClick}
+        className={`button ${props.className}`}
+      >
         {props.text}
       </button>
     </>

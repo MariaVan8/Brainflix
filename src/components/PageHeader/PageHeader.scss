@@ -3,6 +3,7 @@
 @use "../../styles/partials/variables" as *;
 a {
   text-decoration: none;
+  width: 50%;
 }
 
 .header {
@@ -17,35 +18,40 @@ a {
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 0.5rem 1rem;
+    width: 100%;
   }
   &__logo {
-    width: 55%;
+    width: 100%;
     height: 4rem;
     display: flex;
     align-items: center;
-    margin: auto;
+    // margin: auto;
     @include tablet {
-      justify-content: space-between;
-      width: 100%;
-      height: 1.5rem;
-    }
-    @include desktop {
-      width: 100%;
+      margin-left: 0;
+      width: 50%;
       height: 2rem;
     }
+    @include desktop {
+      width: 50%;
+      height: 2rem;
+    }
+  }
+  &__logo-container {
+    width: 50%;
   }
   &__form {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
-    padding: 0.7rem;
+    // padding: 0.7rem;
     width: 100%;
     @include tablet {
       display: flex;
       flex-wrap: nowrap;
       width: 60%;
       padding-right: 2rem;
+      padding: 0.7rem;
     }
     @include desktop {
       width: 40%;
@@ -78,6 +84,15 @@ a {
     object-position: 30%;
     @include tablet {
       order: 3;
+    }
+  }
+  &__button {
+    width: 100%;
+  }
+  &__link {
+    width: 100%;
+    @include tablet {
+      width: 40%;
     }
   }
 }

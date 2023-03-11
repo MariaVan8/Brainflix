@@ -2,15 +2,16 @@ import mohan from "../../assets/Images/Mohan-muruge.jpg";
 import "../../components/Comments/Comments.scss";
 import ButtonComment from "../ButtonComment/ButtonComment";
 
-function Comments({ selectedVideo }) {
-  if (!selectedVideo) return;
+function Comments({ comments }) {
+  console.log(comments);
+  if (!comments) return;
   const submitHandler = (event) => {
     event.preventDefault();
   };
 
   return (
     <>
-      <h1 className="form__header">3 Comments</h1>
+      <h1 className="form__header">{comments.length} Comments</h1>
       <div className="form">
         <div className="form__item-left">
           <img className="form__image" src={mohan} />
@@ -31,8 +32,8 @@ function Comments({ selectedVideo }) {
         </form>
       </div>
       <div>
-        {selectedVideo.comments?.map((comment) => {
-          const date = new Date(selectedVideo.timestamp);
+        {comments?.map((comment) => {
+          const date = new Date(comment.timestamp);
           const year = date.getFullYear();
           const month = date.getMonth() + 1; // Months are zero-indexed, so add 1
           const day = date.getDate();

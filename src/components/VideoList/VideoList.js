@@ -3,6 +3,9 @@ import "../VideoList/VideoList.scss";
 import { Link } from "react-router-dom";
 
 function VideoList({ videos, selectedVideo }) {
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   return (
     <>
       <h1 className="videolist__header">Next videos</h1>
@@ -13,6 +16,7 @@ function VideoList({ videos, selectedVideo }) {
             className="videolist__video"
             key={video.id}
             to={`/videos/${video.id}`}
+            onClick={scrollToTop}
           >
             <div className="videolist" key={video.id}>
               <div

@@ -66,7 +66,7 @@ function HomePage() {
       <div className="desktop">
         <div className="desktop__left">
           <Description selectedVideo={selectedVideo} />
-          <Comments selectedVideo={selectedVideo} />
+          <Comments comments={selectedVideo.comments} />
         </div>
         <div className="desktop__right">
           <VideoList

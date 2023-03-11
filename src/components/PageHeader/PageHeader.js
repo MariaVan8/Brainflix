@@ -1,13 +1,13 @@
 import mohan from "../../assets/Images/Mohan-muruge.jpg";
 import logo from "../../assets/Logo/logo.svg";
 import Button from "../Button/Button";
-import "../Header/Header.scss";
+import "../PageHeader/PageHeader.scss";
 import { Link } from "react-router-dom";
 
-function Header() {
+function PageHeader() {
   return (
     <header className="header">
-      <Link to="/" title="HomePage">
+      <Link to="/" title="HomePage" className="header__logo-container">
         <img className="header__logo" src={logo} />
       </Link>
       <form className="header__form">
@@ -18,10 +18,12 @@ function Header() {
           placeholder="Search"
         />
         <img className="header__image" src={mohan} />
-        <Button className="header__button" text="Upload" />
+        <Link to="/upload" title="UploadPage" className="header__link">
+          <Button className="header__button" text="Upload" />
+        </Link>
       </form>
     </header>
   );
 }
 
-export default Header;
+export default PageHeader;
