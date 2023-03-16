@@ -9,7 +9,7 @@ import { Link, useParams } from "react-router-dom";
 // import VideoData from "../../data/videos.json";
 // import DetailedVideos from "../../data/video-details.json";
 
-const api = "https://project-2-api.herokuapp.com";
+const api = "http://localhost:8000";
 const apiKey = "fc3d88f5-649d-4acb-b2ce-4e66a5e9c423";
 
 function HomePage() {
@@ -32,7 +32,7 @@ function HomePage() {
 
   function getVideos() {
     axios
-      .get(`${api}/videos?api_key=${apiKey}`)
+      .get(`${api}/videos`)
       .then((response) => {
         console.log("response from get videos: ", response.data);
         setVideos(response.data);
@@ -44,9 +44,9 @@ function HomePage() {
 
   function getSelectedVideo(videoId) {
     axios
-      .get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+      .get(`${api}/videos/${videoId}`)
       .then((response) => {
-        console.log("response from get videos: ", response.data);
+        console.log("RESPONSE FROM VIDEOS!!: ", response.data);
         setSelectedVideo(response.data);
       })
       .catch((err) => {
